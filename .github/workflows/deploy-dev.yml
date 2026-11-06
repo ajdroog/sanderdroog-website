@@ -95,4 +95,4 @@ jobs:
           code=$(curl -s -o /dev/null -w '%{http_code}' "https://$DEV_HOST/robots.txt")
           echo "https://$DEV_HOST/robots.txt gaf HTTP $code"
           curl -s "https://$DEV_HOST/robots.txt" | grep -q 'Disallow: /'
-# Opnieuw geregistreerd via GitHub
+# Dev-upload actief
