@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sanderdroog.nl · Business development met lef</title>
+<meta name="description" content="Business development, ventures en AI in de praktijk. Sander Droog helpt ondernemers en organisaties in Noord-Nederland een kans scherp te maken en in beweging te zetten.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&amp;family=Figtree:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F2F57;--blue:#1D4E89;--sky:#5B9BD9;--ice:#E6EFF9;--line:#D5E2F1;--orange:#E8762C;--rust:#B8511A;--grey:#4A5B73}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Figtree',system-ui,sans-serif;color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--navy)}a:hover{color:var(--blue)}
+h1,h2,h3,p,ol{margin:0}
+.serif{font-family:'Fraunces',Georgia,serif}
+.wrap{max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,40px)}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--rust)}
+.h2{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(34px,4.2vw,54px);line-height:1.08;letter-spacing:-.015em;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 26px;border-radius:999px;font-size:17px;font-weight:700;text-decoration:none}
+.btn-orange{background:var(--orange);color:var(--navy)}
+.btn-orange:hover{color:var(--navy);filter:brightness(1.06)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+/* header */
+.header-in{max-width:1200px;margin:0 auto;padding:20px clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo span{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:27px;letter-spacing:-.01em;color:var(--navy)}
+.logo span b{color:var(--orange);font-weight:900}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:16px;font-weight:600}
+nav a{color:var(--navy);text-decoration:none}
+nav a.cta{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:999px;background:var(--navy);color:#fff;font-weight:700}
+nav a:not(.cta):hover{text-decoration:underline}
+/* hero */
+.hero{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(20px,4vw,40px) clamp(48px,6vw,80px);display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.hero-text{flex:1 1 540px;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.pill{padding:8px 16px;border-radius:999px;background:var(--ice);color:var(--blue);font-size:15px;font-weight:700}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(48px,6.6vw,92px);line-height:1.02;letter-spacing:-.02em;color:var(--navy)}
+h1 span{background:var(--orange);color:var(--navy);padding:0 .14em;border-radius:14px}
+.lead{max-width:560px;font-size:20px;line-height:1.6;color:var(--grey)}
+.hero-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.hero-links .btn{min-height:54px;padding:12px 28px}
+.hero-links a.plain{font-size:17px;font-weight:700}
+.hero-photo{flex:1 1 420px;min-width:0;position:relative}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:32px}
+.float-card{position:absolute;right:20px;bottom:-28px;max-width:290px;background:#fff;border-radius:20px;padding:22px 24px;display:flex;flex-direction:column;gap:6px;box-shadow:0 12px 32px rgba(15,47,87,.14)}
+.float-card p:first-child{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:21px;line-height:1.25}
+.float-card p:last-child{font-size:15px;line-height:1.45;color:var(--grey)}
+.clients{border-top:1px solid var(--line)}
+.clients-in{max-width:1200px;margin:0 auto;padding:36px clamp(20px,4vw,40px) 40px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 36px}
+.clients-in .label{font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.clients-in .name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:20px}
+/* herken je dit */
+.sec-ice{background:var(--ice)}
+.center{max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:14px}
+.cards{display:flex;flex-wrap:wrap;gap:20px;margin-top:48px}
+.quote{flex:1 1 440px;min-width:0;background:#fff;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:14px}
+.quote .mark{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:64px;line-height:.6;color:var(--orange)}
+.quote .q{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;line-height:1.3}
+.quote .help{margin-top:8px;font-size:15px;color:var(--grey)}
+.quote .help strong{color:var(--blue)}
+/* wat ik doe */
+.offer-grid{display:flex;flex-wrap:wrap;gap:24px;margin-top:48px}
+.offer{flex:1 1 320px;min-width:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.offer-head{padding:28px 28px 24px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.offer-head h3{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:27px;line-height:1.15}
+.tag{padding:5px 12px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.offer-body{padding:28px;display:flex;flex-direction:column;gap:16px;flex-grow:1}
+.offer-body p:first-child{font-size:17px;line-height:1.6;color:var(--grey)}
+.offer-body .form{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:15px;line-height:1.5;color:var(--grey)}
+.offer-body .form strong{color:var(--navy)}
+/* werkwijze */
+.steps{margin-top:48px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:32px 0}
+.steps li{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:14px;padding-right:24px}
+.steps li:last-child{padding-right:0}
+.step-line{display:flex;align-items:center}
+.dot{flex:0 0 20px;width:20px;height:20px;border-radius:999px;background:var(--orange);border:4px solid #FFE3D0}
+.dot.end{background:var(--navy);border-color:var(--line)}
+.bar{flex:1 1 auto;height:3px;background:var(--sky)}
+.step-n{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.steps h3{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:25px}
+.steps p{font-size:17px;line-height:1.55;color:var(--grey)}
+/* verhaal */
+.story{background:var(--navy);color:#fff}
+.story .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.story-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.story .eyebrow{color:var(--orange)}
+.story .h2{color:#fff}
+.story-text>p{font-size:18px;line-height:1.6;color:#B9C8DC}
+.lessons{display:flex;flex-wrap:wrap;gap:20px 28px;margin-top:4px}
+.lessons div{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.lessons h3{font-size:18px;font-weight:800;color:var(--orange)}
+.lessons p{font-size:16px;line-height:1.55;color:#DCE6F2}
+.story-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:8px}
+.story-actions a.plain{font-size:16px;font-weight:600;color:#fff}
+.story-photo{display:block;flex:1 1 380px;min-width:0;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:28px}
+/* projecten */
+.proj{flex:1 1 320px;min-width:0;background:#fff;border-radius:22px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.proj .tag2{padding:5px 12px;border-radius:999px;background:var(--ice);color:var(--blue);font-size:13px;font-weight:700}
+.proj h3{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:25px}
+.proj p{font-size:16px;line-height:1.55;color:var(--grey)}
+/* over mij */
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.about-text{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.about-text p{font-size:18px;line-height:1.6;color:var(--grey)}
+.about img{display:block;flex:1 1 340px;max-width:440px;min-width:0;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:28px}
+/* contact */
+.contact{background:var(--sky)}
+.contact .wrap{padding-top:clamp(64px,8vw,96px);padding-bottom:clamp(64px,8vw,96px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px 56px}
+.contact-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.contact-text .h2{font-size:clamp(34px,4.6vw,58px);line-height:1.06}
+.contact-text p{max-width:560px;font-size:19px;line-height:1.6}
+.contact-actions{flex:0 1 360px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.contact-actions .btn{min-height:54px;padding:12px 24px}
+.contact-actions .dark{background:var(--navy);color:#fff}
+.contact-actions .light{background:#fff;color:var(--navy)}
+.contact-actions a.plain{align-self:center;font-size:16px;font-weight:700}
+/* footer */
+footer{background:var(--navy)}
+.foot-in{max-width:1200px;margin:0 auto;padding:32px clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
+.foot-in .logo span{font-size:21px;color:#fff}
+.foot-in p{font-size:15px;color:#B9C8DC}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-in">
+<a class="logo" href="#top" aria-label="sanderdroog.nl, naar boven">
+<svg width="29" height="44" viewBox="15 10 42 63" aria-hidden="true"><path d="M27.3 18L16.4 68.6L31.8 71.9C35.5 63 38.6 53 38.2 45C37.6 34 32.6 25.5 27.3 18Z" fill="#0F2F57"/><path d="M44.6 11L33.2 68.6L47.6 71.8C51 64 55 52 55 42C55 30 50 20 44.6 11Z" fill="#E8762C"/></svg>
+<span>sanderdroog<b>.nl</b></span>
+</a>
+<nav aria-label="Hoofdmenu">
+<a href="#wat-ik-doe">Wat ik doe</a>
+<a href="#werkwijze">Werkwijze</a>
+<a href="#verhaal">Het verhaal</a>
+<a href="#projecten">Projecten</a>
+<a class="cta" href="#contact">Kennismaken</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section id="top">
+<div class="hero">
+<div class="hero-text">
+<span class="pill">Business development · Ventures · AI</span>
+<h1>Business development met <span>lef</span>.</h1>
+<p class="lead">Je ziet een kans, maar niemand trekt het. Ik maak het idee scherp, haal de juiste mensen erbij en zet het in beweging. Voor ondernemers en organisaties in Noord-Nederland.</p>
+<div class="hero-links">
+<a class="btn btn-orange" href="#contact">Plan een kennismaking <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+<a class="plain" href="#werkwijze">Zo werk ik</a>
+</div>
+</div>
+<div class="hero-photo">
+<img src="fotos/sander-aan-het-roer.jpg" width="1200" height="1200" alt="Sander aan het roer van een zeilboot op open zee" fetchpriority="high">
+<div class="float-card">
+<p>Van idee tot uitvoering.</p>
+<p>Ik blijf tot het loopt, en draag het dan over.</p>
+</div>
+</div>
+</div>
+<div class="clients">
+<div class="clients-in">
+<p class="label">Gewerkt voor en met</p>
+<p class="name">Voerman Group</p>
+<p class="name">De Vries Maritiem</p>
+<p class="name">Gebiedscoöperatie Zuidoost-Groningen</p>
+<p class="name">Ondernemers Netwerk Midden-Drenthe</p>
+</div>
+</div>
+</section>
+
+<section class="sec-ice">
+<div class="wrap">
+<div class="center">
+<p class="eyebrow">Herken je dit?</p>
+<h2 class="h2">Wanneer bel je mij?</h2>
+</div>
+<div class="cards">
+<div class="quote"><span class="mark" aria-hidden="true">“</span><p class="q">We zien een kans, maar niemand trekt het.</p><p class="help">Dan helpt: <strong>business development en aanjagen</strong></p></div>
+<div class="quote"><span class="mark" aria-hidden="true">“</span><p class="q">Onze groei loopt vast. De commercie moet anders.</p><p class="help">Dan helpt: <strong>een interim-rol of verandertraject</strong></p></div>
+<div class="quote"><span class="mark" aria-hidden="true">“</span><p class="q">Ik bouw iets nieuws en zoek iemand die meedenkt én meedoet.</p><p class="help">Dan helpt: <strong>meebouwen aan je venture</strong></p></div>
+<div class="quote"><span class="mark" aria-hidden="true">“</span><p class="q">We willen iets met AI, maar waar begin je?</p><p class="help">Dan helpt: <strong>AI in de praktijk</strong></p></div>
+</div>
+</div>
+</section>
+
+<section id="wat-ik-doe">
+<div class="wrap">
+<p class="eyebrow" style="margin-bottom:14px">Wat ik doe</p>
+<h2 class="h2" style="max-width:760px">Ik stop niet bij het advies. Ik stop er energie in.</h2>
+<div class="offer-grid">
+<div class="offer">
+<div class="offer-head" style="background:var(--navy)"><span class="tag" style="background:var(--orange);color:var(--navy)">De kern</span><h3 style="color:#fff">Business development en aanjagen</h3></div>
+<div class="offer-body"><p>Ik verken de kans, maak de business case, breng de juiste partijen samen en zet de eerste stappen. Nieuwe markten, commerciële groei, projectleiding en verandering.</p><p class="form"><strong>Vorm:</strong> verkenning, aanjaagtraject of interim-rol</p></div>
+</div>
+<div class="offer">
+<div class="offer-head" style="background:var(--blue)"><span class="tag" style="background:#fff;color:var(--blue)">Ventures</span><h3 style="color:#fff">Meebouwen aan nieuwe bedrijven</h3></div>
+<div class="offer-body"><p>Voor ondernemers met een jong bedrijf of een nieuw idee. Ik stap in met tijd en netwerk, en waar het past ook met kapitaal. Mee aan het roer, niet aan de zijlijn.</p><p class="form"><strong>Vorm:</strong> vast bedrag, een belang of een mix</p></div>
+</div>
+<div class="offer">
+<div class="offer-head" style="background:var(--sky)"><span class="tag" style="background:var(--navy);color:#fff">AI</span><h3 style="color:var(--navy)">AI in de praktijk</h3></div>
+<div class="offer-body"><p>Ik werk dagelijks met AI en bouw zelf applicaties. Ik laat zien wat het jouw organisatie oplevert en zet samen met je de eerste toepassing neer.</p><p class="form"><strong>Vorm:</strong> workshop, quickscan of bouwtraject</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="werkwijze" style="border-top:1px solid var(--line)">
+<div class="wrap">
+<p class="eyebrow" style="margin-bottom:14px">Werkwijze</p>
+<h2 class="h2">Van idee naar beweging</h2>
+<ol class="steps">
+<li><div class="step-line"><span class="dot" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></div><p class="step-n">Stap 1</p><h3>Kans zien</h3><p>Samen scherp krijgen wat de kans is, voor wie, en wat hij waard is.</p></li>
+<li><div class="step-line"><span class="dot" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></div><p class="step-n">Stap 2</p><h3>Koers zetten</h3><p>Een plan dat op één A4 past, met de juiste mensen aan boord.</p></li>
+<li><div class="step-line"><span class="dot" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></div><p class="step-n">Stap 3</p><h3>Energie erin</h3><p>Doen: eerste klanten, een pilot, partners aan tafel. Bijsturen waar nodig.</p></li>
+<li><div class="step-line"><span class="dot end" aria-hidden="true"></span></div><p class="step-n">Stap 4</p><h3>Overdragen</h3><p>Het loopt, ook zonder mij. Jouw team staat aan het roer.</p></li>
+</ol>
+</div>
+</section>
+
+<section id="verhaal" class="story">
+<div class="wrap">
+<div class="story-text">
+<p class="eyebrow">2.100 zeemijl zonder mast</p>
+<h2 class="h2">Wat de oceaan me leerde over ondernemen</h2>
+<p>Tijdens onze wereldreis met de Blue Beryl brak midden op de Grote Oceaan de mast. Yvette en ik zeilden met noodtuig door: 2.100 zeemijl. Wat ik daar leerde, gebruik ik elke dag in mijn werk.</p>
+<div class="lessons">
+<div><h3>Weerbaarheid</h3><p>Breekt het plan, dan maak je een nieuw plan. Niet morgen, nu.</p></div>
+<div><h3>Samenwerken</h3><p>Aan boord heb je elkaar nodig. Ieder een taak, één koers.</p></div>
+<div><h3>Helder denken onder druk</h3><p>Eerst overzicht, dan de volgende stap. Paniek kost snelheid.</p></div>
+<div><h3>Doen</h3><p>Wie wacht op beter weer, komt nooit aan.</p></div>
+</div>
+<div class="story-actions">
+<a class="btn btn-orange" href="#contact">Boek de lezing voor je team</a>
+<a class="plain" href="https://blueberylsailing.com">Voor verenigingen: blueberylsailing.com</a>
+</div>
+</div>
+<img class="story-photo" src="fotos/blue-beryl-noodtuig.jpg" width="1200" height="1200" loading="lazy" alt="De Blue Beryl zonder mast, onder noodtuig langs een groene bergkust">
+</div>
+</section>
+
+<section id="projecten" class="sec-ice">
+<div class="wrap">
+<p class="eyebrow" style="margin-bottom:14px">Projecten</p>
+<h2 class="h2">Waar ik aan werkte en werk</h2>
+<div class="cards" style="margin-top:44px">
+<div class="proj"><span class="tag2">Business development · projectleiding</span><h3>Voerman Group</h3><p>Salesplatform, apps en Power BI voor de verhuisbranche. Later de verhuizing naar een nieuw kantoor en een nieuwe loods, en de invoering van een WMS.</p></div>
+<div class="proj"><span class="tag2">Interim</span><h3>De Vries Maritiem</h3><p>Interim manager Marketing en Sales bij de zeilmakerij.</p></div>
+<div class="proj"><span class="tag2">Energie · bedrijventerreinen</span><h3>Gebiedscoöperatie Zuidoost-Groningen</h3><p>Projectleider. Ondernemers, overheid en kennisinstellingen aan één tafel.</p></div>
+<div class="proj"><span class="tag2">Ondernemersnetwerk</span><h3>Ondernemers Netwerk Midden-Drenthe</h3><p>Projectleider. Ondernemers en gemeente weten elkaar beter te vinden en luisteren naar elkaar.</p></div>
+<div class="proj"><span class="tag2">Venture</span><h3>Avocado-olie uit Tanzania</h3><p>Meegebouwd aan de opbouw van een avocado-olieproductie, van de boeren tot de fabriek.</p></div>
+<div class="proj"><span class="tag2">AI · eigen product</span><h3>waargaanweskien.nl</h3><p>Een AI-app in ontwikkeling die samen met een virtuele berggids uitzoekt waar jij gaat skiën.</p></div>
+</div>
+</div>
+</section>
+
+<section id="over-mij">
+<div class="wrap about">
+<div class="about-text">
+<p class="eyebrow">Over mij</p>
+<h2 class="h2">Sander Droog</h2>
+<p>Ik ben ondernemer sinds 2011. Ik begon als hockeycoach en zeilinstructeur, startte tijdens mijn studie Voor Jouw Club en werkte daarna als business developer, interim manager en projectleider.</p>
+<p>Ik ben een dienend leider: ik zet mensen in hun kracht, zodat het daarna ook zonder mij loopt. Nuchter, no-nonsense en met een beetje lef.</p>
+<p>Ik woon in Meerstad en werk vooral in Groningen, Drenthe en Friesland.</p>
+</div>
+<img src="fotos/sander-op-rots.jpg" width="1000" height="1250" loading="lazy" alt="Sander zittend op een rots boven de oceaan">
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="wrap">
+<div class="contact-text">
+<h2 class="h2">Een kans die blijft liggen?</h2>
+<p>Bel of mail me. Dan kijken we samen of en hoe ik kan helpen. De eerste kop koffie is altijd vrijblijvend.</p>
+</div>
+<div class="contact-actions">
+<a class="btn dark" href="tel:+31647953349">Bel 06 47 95 33 49</a>
+<a class="btn light" href="mailto:info@sanderdroog.nl">info@sanderdroog.nl</a>
+<a class="plain" href="https://www.linkedin.com/in/sanderdroog">Of volg me op LinkedIn</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="foot-in">
+<a class="logo" href="#top" aria-label="sanderdroog.nl, naar boven">
+<svg width="22" height="33" viewBox="15 10 42 63" aria-hidden="true"><path d="M27.3 18L16.4 68.6L31.8 71.9C35.5 63 38.6 53 38.2 45C37.6 34 32.6 25.5 27.3 18Z" fill="#FFFFFF"/><path d="M44.6 11L33.2 68.6L47.6 71.8C51 64 55 52 55 42C55 30 50 20 44.6 11Z" fill="#E8762C"/></svg>
+<span>sanderdroog<b>.nl</b></span>
+</a>
+<p>© 2026 sanderdroog.nl · Meerstad, Groningen</p>
+</div>
+</footer>
+
+</body>
+</html>
