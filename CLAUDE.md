@@ -22,3 +22,12 @@ Twijfel je over een feit, vraag het Sander. KvK-nummer staat bewust niet op de s
 
 ## Veiligheid
 - Nooit wachtwoorden, sleutels of tokens in de repo. SFTP-gegevens staan alleen in GitHub Secrets.
+
+## Lessen voor een nieuwe dev-site (TransIP + GitHub Actions)
+Handig als dezelfde opzet voor een andere site nodig is (bijvoorbeeld klikklikwalls.nl). Hergebruik `.github/workflows/deploy-dev.yml` en `.github/scripts/dev-build.sh` en pas alleen hostnaam en `DEV_REMOTE_DIR` aan.
+1. TransIP: voeg de dev-site toe als subsite via "Website toevoegen" en kies "Use a subdomain on …" (standaard staat het op het hoofddomein). Controleer het serverpad, bijvoorbeeld `/site/subsites/dev.<domein>`. Eén SFTP-gebruiker geldt voor het hele pakket.
+2. GitHub: een nieuwe repo toont soms "Actions is not currently enabled". Klik dan op de groene knop "Enable Actions on this repository".
+3. Sleutel: zet de privésleutel als één regel base64 in het geheim `SFTP_KEY_B64`. Meerdere regels plakken geeft `error in libcrypto`. De publieke sleutel gaat in TransIP via "Key toevoegen". Plak een privésleutel nooit in een chat.
+4. `dev-build.sh` zet `DirectoryIndex index.html`, anders wint de TransIP-standaardpagina op `/`.
+5. Na het aanmaken kan de dev-URL nog even "Reserved domain" tonen (DNS-cache). Wacht of probeer een privévenster.
+6. Logs van een openbare repo zijn voor iedereen leesbaar: log geen gegevens die niet openbaar mogen zijn.
