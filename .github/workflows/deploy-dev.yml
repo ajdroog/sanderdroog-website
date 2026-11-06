@@ -1,6 +1,6 @@
 name: Deploy dev-site naar TransIP
 
-# Bij elke wijziging op branch "dev" gaat www/ (als dev-versie) naar dev.sanderdroog.nl.
+# Bij elke wijziging op branch "dev" gaat www/ (als dev-versie) naar dev.sanderdroog.nl. Start na elke push.
 # De echte site (sanderdroog.nl) wordt hier NOOIT aangeraakt.
 on:
   push:
