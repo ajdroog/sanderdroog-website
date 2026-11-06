@@ -9,6 +9,8 @@ rm -f build/sitemap.xml
 find build -name '*.html' -print0 | xargs -0 sed -i 's#<head>#<head>\n<meta name="robots" content="noindex, nofollow">#'
 # .htaccess: header X-Robots-Tag (alleen op dev), bestaande regels blijven staan
 touch build/.htaccess
+# Standaardpagina van TransIP mag onze index.html niet overschaduwen
+printf 'DirectoryIndex index.html\n' | cat - build/.htaccess > build/.htaccess.new && mv build/.htaccess.new build/.htaccess
 cat >> build/.htaccess <<'HT'
 <IfModule mod_headers.c>
 Header set X-Robots-Tag "noindex, nofollow, noarchive"
