@@ -66,7 +66,8 @@ jobs:
             ssh-keyscan -p "${SFTP_PORT:-22}" "$SFTP_HOST" > ~/.ssh/known_hosts 2>/dev/null
           fi
           if [ -n "$SFTP_KEY" ]; then
-            printf '%s\n' "$SFTP_KEY" > ~/.ssh/id_deploy && chmod 600 ~/.ssh/id_deploy
+            printf '%s\n' "$SFTP_KEY" | tr -d '\r' > ~/.ssh/id_deploy && chmod 600 ~/.ssh/id_deploy
+            ssh-keygen -y -f ~/.ssh/id_deploy > /dev/null && echo 'Sleutel is leesbaar' || echo '::error::Sleutel in SFTP_KEY is ongeldig'
           fi
 
       - name: Upload naar dev.sanderdroog.nl
